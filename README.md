@@ -1,2 +1,3 @@
 # musicloud-electron
-MusicLoud (Electron Version)
+Rewriting MusicLoud (https://github.com/pldin601/musicloud) on Electron.
+
