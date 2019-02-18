@@ -9,12 +9,15 @@
     "dist:dir": "npm run dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
+    "ffmpeg-static": "^2.4.0",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
     "electron": "4.0.1",
     "electron-builder": "20.38.4",
     "electron-webpack": "^2.6.2",
+    "eslint": "^5.14.1",
+    "jest": "^24.1.0",
     "webpack": "4.28.4"
   }
 }
