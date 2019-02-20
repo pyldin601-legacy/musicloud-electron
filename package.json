@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "ffmpeg-static": "^2.4.0",
+    "ffprobe-static": "^3.0.0",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
