@@ -2,11 +2,23 @@
   "name": "musicloud-electron",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Roman Lakhtadyr",
+    "email": "roman.lakhtadyr@gmail.com"
+  },
   "scripts": {
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
     "dist": "npm run compile && electron-builder",
     "dist:dir": "npm run dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "build": {
+    "appId": "com.peacefulbit.musicloud",
+    "productName": "Musicloud",
+    "mac": {
+      "category": "public.app-category.music"
+    }
   },
   "dependencies": {
     "ffmpeg-static": "^2.4.0",
