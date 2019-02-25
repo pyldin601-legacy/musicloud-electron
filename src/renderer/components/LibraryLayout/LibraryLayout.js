@@ -1,30 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const Sidebar = styled.div`
-  background-color: #f1f2f4;
-  border-right: 1px solid #ced1d6;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-`;
-const LibraryContent = styled.div`
-  padding-bottom: 48px;
-`;
-const LibrarySections = styled.div``;
-const LibraryPlaylists = styled.div``;
-const PlayerControls = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 48px;
-  display: table;
-  table-layout: fixed;
-  border-top: 1px solid #313d49;
-  bottom: 0;
-  z-index: 10;
-  color: #dddddd;
-  background-color: #223344;
-`;
+import Sidebar from './Sidebar/Sidebar';
+import PlayerControls from './PlayerControls/PlayerControls';
+import LibrarySections from './LibrarySections/LibrarySections';
+import LibraryPlaylists from './LibraryPlaylists/LibraryPlaylists';
+import LibraryContent from './LibraryContent/LibraryContent';
 
 const LayoutWrap = styled.div`
   display: flex;
@@ -33,6 +13,16 @@ const LayoutWrap = styled.div`
 
   & ${Sidebar} {
     width: 260px;
+  }
+
+  & ${LibraryContent} {
+    padding-bottom: 48px;
+  }
+
+  & ${PlayerControls} {
+    border-top: 1px solid #313d49;
+    bottom: 0;
+    z-index: 10;
   }
 `;
 
