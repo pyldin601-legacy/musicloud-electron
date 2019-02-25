@@ -20,6 +20,7 @@ const LayoutWrap = styled.div`
   }
 
   & ${PlayerControls} {
+    position: fixed;
     border-top: 1px solid #313d49;
     bottom: 0;
     z-index: 10;
