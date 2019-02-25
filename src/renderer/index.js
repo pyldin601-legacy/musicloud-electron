@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './components/Layout';
+import App from './App';
+import 'reset-css/reset.css';
 
-ReactDOM.render(<Layout />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
