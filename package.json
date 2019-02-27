@@ -24,6 +24,7 @@
   "dependencies": {
     "ffmpeg-static": "^2.4.0",
     "ffprobe-static": "^3.0.0",
+    "fluent-ffmpeg": "^2.1.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "reset-css": "^4.0.1",
