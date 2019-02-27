@@ -55,12 +55,15 @@ test('Should correctly read audio file format and tags', done => {
 
 test('Should correctly decode mp3 file to pcm', done => {
   const writer = new WritableCounter();
-  const decoder = ffmpegCommand()
-    .input(audioFile)
+  const decoder = ffmpegCommand(audioFile)
     .audioCodec('pcm_s16le')
     .audioChannels(2)
     .audioFrequency(44100)
     .outputFormat('s16le');
+
+  decoder.on('error', err => {
+    throw new Error(err);
+  });
 
   decoder.on('end', () => {
     expect(writer.counter).toBe(17648640);
