@@ -1,13 +1,14 @@
 import ffmpeg from 'ffmpeg-static';
 import ffprobe from 'ffprobe-static';
 import ffmpegCommand from 'fluent-ffmpeg';
-import fs from 'fs';
 import { Writable } from 'stream';
+import { join } from 'path';
+import fs from 'fs';
 
 process.env.FFMPEG_PATH = ffmpeg.path;
 process.env.FFPROBE_PATH = ffprobe.path;
 
-const audioFile = `${__dirname}/__fixtures__/example.mp3`;
+const audioFile = join(__dirname, '__fixtures__', 'example.mp3');
 
 class WritableCounter extends Writable {
   constructor() {
@@ -60,10 +61,6 @@ test('Should correctly decode mp3 file to pcm', done => {
     .audioChannels(2)
     .audioFrequency(44100)
     .outputFormat('s16le');
-
-  decoder.on('error', err => {
-    throw new Error(err);
-  });
 
   decoder.on('end', () => {
     expect(writer.counter).toBe(17648640);
