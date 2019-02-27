@@ -3,6 +3,7 @@ import ffprobe from 'ffprobe-static';
 import ffmpegCommand from 'fluent-ffmpeg';
 import { Writable } from 'stream';
 import { join } from 'path';
+import { exec } from 'child_process';
 import fs from 'fs';
 
 process.env.FFMPEG_PATH = ffmpeg.path;
@@ -22,9 +23,14 @@ class WritableCounter extends Writable {
   }
 }
 
-test('Should return the path of a statically linked ffmpeg binary on the local filesystem', () => {
+test('Should return the path of a statically linked ffmpeg binary on the local filesystem', done => {
   const { path } = ffmpeg;
   expect(fs.existsSync(path)).toBeTruthy();
+  exec(path, (err, stdout, stderr) => {
+    console.log(stderr);
+    expect(stderr).toContain('Hyper fast Audio and Video encoder');
+    done();
+  });
 });
 
 test('Should return the path of a statically linked ffprobe binary on the local filesystem', () => {
