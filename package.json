@@ -33,6 +33,7 @@
     "verbose": true
   },
   "dependencies": {
+    "electron": "4.0.1",
     "ffmpeg-static": "^2.4.0",
     "ffprobe-static": "^3.0.0",
     "fluent-ffmpeg": "^2.1.2",
@@ -46,7 +47,6 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "electron": "4.0.1",
     "electron-builder": "20.38.4",
     "electron-webpack": "^2.6.2",
     "eslint": "^5.14.1",
