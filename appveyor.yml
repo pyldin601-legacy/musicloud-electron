@@ -1,11 +1,11 @@
-version: "{build}"
+version: '{build}'
 image: Visual Studio 2017
-init:
-- cmd: >-
-    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-    cinst nodejs.install
+# init:
+# - cmd: >-
+#     @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+#     cinst nodejs.install
 install:
-- cmd: npm ci
+  - cmd: npm ci
 build: off
 test_script:
-- cmd: npm test
+  - cmd: npm test
