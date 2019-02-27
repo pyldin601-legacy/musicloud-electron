@@ -4,3 +4,7 @@ node_js:
 os:
   - "linux"
   - "osx"
+script:
+  - "npm test --coverage"
+  - "cat ./coverage/lcov.info | npx coveralls
+sudo: false
