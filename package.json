@@ -21,6 +21,14 @@
       "category": "public.app-category.music"
     }
   },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": ["js"],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
   "dependencies": {
     "ffmpeg-static": "^2.4.0",
     "ffprobe-static": "^3.0.0",
