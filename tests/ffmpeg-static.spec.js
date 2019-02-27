@@ -2,9 +2,24 @@ import ffmpeg from 'ffmpeg-static';
 import ffprobe from 'ffprobe-static';
 import ffmpegCommand from 'fluent-ffmpeg';
 import fs from 'fs';
+import { Writable } from 'stream';
 
 process.env.FFMPEG_PATH = ffmpeg.path;
 process.env.FFPROBE_PATH = ffprobe.path;
+
+const audioFile = `${__dirname}/__fixtures__/example.mp3`;
+
+class WritableCounter extends Writable {
+  constructor() {
+    super();
+    this.counter = 0;
+  }
+
+  _write(chunk, encoding, callback) {
+    this.counter += chunk.length;
+    callback();
+  }
+}
 
 test('Should return the path of a statically linked ffmpeg binary on the local filesystem', () => {
   const { path } = ffmpeg;
@@ -17,7 +32,6 @@ test('Should return the path of a statically linked ffprobe binary on the local 
 });
 
 test('Should correctly read audio file format and tags', done => {
-  const audioFile = `${__dirname}/__fixtures__/example.mp3`;
   ffmpegCommand(audioFile).ffprobe((err, metadata) => {
     expect(err).toBeNull();
 
@@ -38,3 +52,20 @@ test('Should correctly read audio file format and tags', done => {
     done();
   });
 });
+
+test('Should correctly decode mp3 file to pcm', done => {
+  const writer = new WritableCounter();
+  const decoder = ffmpegCommand()
+    .input(audioFile)
+    .audioCodec('pcm_s16le')
+    .audioChannels(2)
+    .audioFrequency(44100)
+    .outputFormat('s16le');
+
+  decoder.on('end', () => {
+    expect(writer.counter).toBe(17648640);
+    done();
+  });
+
+  decoder.pipe(writer);
+}, 10000);
