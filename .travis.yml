@@ -6,5 +6,5 @@ os:
   - "osx"
 script:
   - npm test --coverage
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cat ./coverage/lcov.info | npx coveralls; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cat ./coverage/lcov.info | npx coveralls; fi
 sudo: false
