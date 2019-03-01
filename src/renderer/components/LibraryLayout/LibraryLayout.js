@@ -7,6 +7,11 @@ import LibraryPlaylists from './LibraryPlaylists/LibraryPlaylists';
 import LibraryContent from './LibraryContent/LibraryContent';
 
 const LayoutWrap = styled.div`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  overflow-y: scroll;
+  cursor: default;
+
   display: flex;
   width: 100vw;
   height: 100vh;
