@@ -1,6 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 import { format as formatUrl } from 'url';
+import config from '../config';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -10,6 +11,7 @@ let mainWindow;
 function createMainWindow() {
   const window = new BrowserWindow({
     webPreferences: { nodeIntegration: true },
+    title: config.applicationName,
   });
 
   if (isDevelopment) {
