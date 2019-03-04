@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Sidebar from './Sidebar/Sidebar';
 import PlayerControls from './PlayerControls/PlayerControls';
-import Content from './LibraryContent/Content';
+import Content from './Content/Content';
 import Library from './Sidebar/Sections/Library';
 import Playlists from './Sidebar/Sections/Playlists';
 
@@ -20,7 +20,7 @@ const LayoutWrap = styled.div`
     width: 260px;
   }
 
-  & ${LibraryContent} {
+  & ${Content} {
     padding-bottom: 48px;
   }
 
