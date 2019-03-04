@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Sidebar from './Sidebar/Sidebar';
 import PlayerControls from './PlayerControls/PlayerControls';
-import LibraryContent from './LibraryContent/LibraryContent';
+import Content from './LibraryContent/Content';
 import Library from './Sidebar/Sections/Library';
 import Playlists from './Sidebar/Sections/Playlists';
 
@@ -39,7 +39,7 @@ const LibraryLayout = () => {
         <Library />
         <Playlists />
       </Sidebar>
-      <LibraryContent />
+      <Content />
       <PlayerControls />
     </LayoutWrap>
   );
