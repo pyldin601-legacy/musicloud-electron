@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Sidebar from './Sidebar/Sidebar';
 import PlayerControls from './PlayerControls/PlayerControls';
-import LibrarySections from './LibrarySections/LibrarySections';
-import LibraryPlaylists from './LibraryPlaylists/LibraryPlaylists';
 import LibraryContent from './LibraryContent/LibraryContent';
+import Library from './Sidebar/Sections/Library';
+import Playlists from './Sidebar/Sections/Playlists';
 
 const LayoutWrap = styled.div`
   font-family: 'Open Sans', sans-serif;
@@ -36,8 +36,8 @@ const LibraryLayout = () => {
   return (
     <LayoutWrap>
       <Sidebar>
-        <LibrarySections />
-        <LibraryPlaylists />
+        <Library />
+        <Playlists />
       </Sidebar>
       <LibraryContent />
       <PlayerControls />

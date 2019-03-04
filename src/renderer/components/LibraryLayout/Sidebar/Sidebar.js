@@ -6,7 +6,7 @@ const Sidebar = styled.div`
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  padding: 16px;
+  color: #757577;
 `;
 
 export default Sidebar;
