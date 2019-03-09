@@ -2,18 +2,28 @@ import React from 'react';
 import SidebarTitle from '../SidebarTitle';
 import SidebarSection from '../SidebarSection';
 import SidebarList from '../SidebarList';
-import SidebarListItem from '../SidebarListItem';
+import SidebarLinkItem from '../SidebarLinkItem';
 
 const Library = () => {
   return (
     <SidebarSection>
       <SidebarTitle>LIBRARY</SidebarTitle>
       <SidebarList>
-        <SidebarListItem>Artists</SidebarListItem>
-        <SidebarListItem>Albums</SidebarListItem>
-        <SidebarListItem>Compilations</SidebarListItem>
-        <SidebarListItem>Genres</SidebarListItem>
-        <SidebarListItem>Tracks</SidebarListItem>
+        <SidebarLinkItem to="/artists" matchingPath="/artists/:artist?">
+          Artists
+        </SidebarLinkItem>
+        <SidebarLinkItem to="/albums" matchingPath="/albums/:album?">
+          Albums
+        </SidebarLinkItem>
+        <SidebarLinkItem to="/compilations" matchingPath="/compilations/:compilation?">
+          Compilations
+        </SidebarLinkItem>
+        <SidebarLinkItem to="/genres" matchingPath="/genres/:genre?">
+          Genres
+        </SidebarLinkItem>
+        <SidebarLinkItem to="/tracks" matchingPath="/tracks">
+          Tracks
+        </SidebarLinkItem>
       </SidebarList>
     </SidebarSection>
   );

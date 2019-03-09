@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { MemoryRouter } from 'react-router';
 import Sidebar from './Sidebar/Sidebar';
 import PlayerControls from './PlayerControls/PlayerControls';
 import Content from './Content/Content';
@@ -34,14 +35,16 @@ const LayoutWrap = styled.div`
 
 const LibraryLayout = () => {
   return (
-    <LayoutWrap>
-      <Sidebar>
-        <Library />
-        <Playlists />
-      </Sidebar>
-      <Content />
-      <PlayerControls />
-    </LayoutWrap>
+    <MemoryRouter>
+      <LayoutWrap>
+        <Sidebar>
+          <Library />
+          <Playlists />
+        </Sidebar>
+        <Content />
+        <PlayerControls />
+      </LayoutWrap>
+    </MemoryRouter>
   );
 };
 
