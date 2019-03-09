@@ -33,6 +33,7 @@
     "verbose": true
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "electron": "4.0.1",
     "ffmpeg-static": "^2.4.0",
     "ffprobe-static": "^3.0.0",
@@ -40,6 +41,7 @@
     "nedb": "^1.8.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-router": "^4.3.1",
     "reset-css": "^4.0.1",
     "source-map-support": "^0.5.10",
     "styled-components": "^4.1.3"
