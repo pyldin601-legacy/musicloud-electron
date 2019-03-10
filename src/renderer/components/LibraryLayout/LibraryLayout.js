@@ -6,6 +6,7 @@ import PlayerControls from './PlayerControls/PlayerControls';
 import Content from './Content/Content';
 import Library from './Sidebar/Sections/Library';
 import Playlists from './Sidebar/Sections/Playlists';
+import ContentWrap from './Content/ContentWrap';
 
 const LayoutWrap = styled.div`
   font-family: 'Open Sans', sans-serif;
@@ -21,7 +22,7 @@ const LayoutWrap = styled.div`
     width: 260px;
   }
 
-  & ${Content} {
+  & ${ContentWrap} {
     padding-bottom: 48px;
   }
 
