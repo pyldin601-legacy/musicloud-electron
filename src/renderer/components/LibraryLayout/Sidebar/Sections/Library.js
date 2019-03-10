@@ -9,19 +9,19 @@ const Library = () => {
     <SidebarSection>
       <SidebarTitle>LIBRARY</SidebarTitle>
       <SidebarList>
-        <SidebarLinkItem to="/artists" matchingPath="/artists/:artist?">
+        <SidebarLinkItem to="/artists" pathToMatch="/artists/:artist?">
           Artists
         </SidebarLinkItem>
-        <SidebarLinkItem to="/albums" matchingPath="/albums/:album?">
+        <SidebarLinkItem to="/albums" pathToMatch="/albums/:album?">
           Albums
         </SidebarLinkItem>
-        <SidebarLinkItem to="/compilations" matchingPath="/compilations/:compilation?">
+        <SidebarLinkItem to="/compilations" pathToMatch="/compilations/:compilation?">
           Compilations
         </SidebarLinkItem>
-        <SidebarLinkItem to="/genres" matchingPath="/genres/:genre?">
+        <SidebarLinkItem to="/genres" pathToMatch="/genres/:genre?">
           Genres
         </SidebarLinkItem>
-        <SidebarLinkItem to="/tracks" matchingPath="/tracks">
+        <SidebarLinkItem to="/tracks" pathToMatch="/tracks">
           Tracks
         </SidebarLinkItem>
       </SidebarList>
