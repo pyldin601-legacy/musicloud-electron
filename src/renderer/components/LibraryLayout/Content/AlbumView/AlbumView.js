@@ -5,7 +5,7 @@ import AlbumViewHeader from './AlbumViewHeader';
 const AlbumView = () => {
   return (
     <AlbumViewWrap>
-      <AlbumViewHeader />
+      <AlbumViewHeader artworkUrl="https://via.placeholder.com/200" />
     </AlbumViewWrap>
   );
 };
