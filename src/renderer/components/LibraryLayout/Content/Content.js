@@ -2,12 +2,13 @@ import React from 'react';
 import { Route } from 'react-router';
 // import styled from 'styled-components';
 import ContentWrap from './ContentWrap';
+import AlbumView from './AlbumView/AlbumView';
 
 const Content = () => {
   return (
     <ContentWrap>
       <Route path="/artists" render={() => 'Artists'} />
-      <Route path="/albums" render={() => 'Albums'} />
+      <Route path="/albums" render={() => <AlbumView />} />
       <Route path="/compilations" render={() => 'Compilations'} />
       <Route path="/genres" render={() => 'Genres'} />
       <Route path="/tracks" render={() => 'Tracks'} />
