@@ -35,7 +35,7 @@ const AlbumViewHeaderWrap = styled.div`
       height: 200px;
       position: relative;
 
-      & .cover {
+      & .artwork {
         width: 100%;
         height: 100%;
         vertical-align: middle;

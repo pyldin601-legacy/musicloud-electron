@@ -6,7 +6,9 @@ const AlbumViewHeader = () => {
     <AlbumViewHeaderWrap>
       <img className="blurred-artwork" alt="cover" src="https://placeimg.com/200/200/animals" />
       <div className="left-section">
-        <div className="backdrop" />
+        <div className="backdrop">
+          <img className="artwork" alt="cover" src="https://placeimg.com/200/200/animals" />
+        </div>
       </div>
       <div className="info-section">
         <div className="album-artist">Mike Oldfield</div>
