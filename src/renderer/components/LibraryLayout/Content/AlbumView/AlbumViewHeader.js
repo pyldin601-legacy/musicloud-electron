@@ -1,7 +1,13 @@
+// @flow
 import React from 'react';
+import { SFC } from '../../../../../types/react';
 import AlbumViewHeaderWrap from './AlbumViewHeaderWrap';
 
-const AlbumViewHeader = () => {
+interface IAlbumViewHeaderProps {
+  artworkUrl: string | null;
+}
+
+const AlbumViewHeader: SFC<IAlbumViewHeaderProps> = () => {
   return (
     <AlbumViewHeaderWrap>
       <img className="blurred-artwork" alt="cover" src="https://placeimg.com/200/200/animals" />
