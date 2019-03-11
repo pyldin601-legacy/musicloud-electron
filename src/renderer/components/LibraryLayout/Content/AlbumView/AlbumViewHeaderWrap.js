@@ -29,7 +29,7 @@ const AlbumViewHeaderWrap = styled.div`
     float: left;
 
     & .backdrop {
-      background: #fcfcfc url(https://placeimg.com/200/200/animals) center center no-repeat;
+      background: #fcfcfc url(/images/no-artwork.jpg) center center no-repeat;
       background-size: cover;
       width: 200px;
       height: 200px;
