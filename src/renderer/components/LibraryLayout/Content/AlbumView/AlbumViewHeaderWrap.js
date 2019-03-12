@@ -68,7 +68,7 @@ const AlbumViewHeaderWrap = styled.div`
       font-weight: 600;
     }
 
-    & .including {
+    & .album-incl {
       font-size: 12pt;
       padding-left: 16px;
       padding-right: 16px;

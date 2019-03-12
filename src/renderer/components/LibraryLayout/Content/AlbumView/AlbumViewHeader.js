@@ -13,6 +13,7 @@ const AlbumViewHeader = ({ artworkUrl }) => {
       <div className="info-section">
         <div className="album-artist">Mike Oldfield</div>
         <div className="album-title">Songs Of Distant Earth</div>
+        <div className="album-incl">Including Rouksopp</div>
         <div className="album-info">
           <table>
             <thead>
