@@ -12,9 +12,7 @@
     "compile": "electron-webpack",
     "dist": "npm run compile && electron-builder",
     "dist:dir": "npm run dist --dir -c.compression=store -c.mac.identity=null",
-    "test": "jest",
-    "install:types": "flow-typed install",
-    "postinstall": "npm run install:types"
+    "test": "jest"
   },
   "build": {
     "appId": "com.peacefulbit.musicloud",
