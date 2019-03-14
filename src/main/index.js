@@ -1,6 +1,7 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import { format as formatUrl } from 'url';
+import registerIpcHandlers from './ipcHandlers';
 import config from '../config';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -61,5 +62,6 @@ app.on('activate', () => {
 
 // create main BrowserWindow when electron is ready
 app.on('ready', () => {
+  registerIpcHandlers(ipcMain);
   mainWindow = createMainWindow();
 });
