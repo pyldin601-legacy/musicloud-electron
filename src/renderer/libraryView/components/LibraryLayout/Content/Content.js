@@ -1,8 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router';
-// import styled from 'styled-components';
 import ContentWrap from './ContentWrap';
-import AlbumView from './AlbumView/AlbumView';
+import AlbumView from '../../../../albumView/components/AlbumView/AlbumView';
 
 const Content = () => {
   return (

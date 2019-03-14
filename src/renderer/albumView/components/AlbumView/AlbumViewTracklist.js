@@ -1,8 +1,8 @@
 import React from 'react';
-import Tracklist from '../Tracklist/Tracklist';
-import TracklistHeader from '../Tracklist/TracklistHeader';
+import Tracklist from '../../../components/Tracklist/Tracklist';
+import TracklistHeader from '../../../components/Tracklist/TracklistHeader';
+import TracklistItem from '../../../components/Tracklist/TracklistItem';
 import AlbumViewTracklistWrap from './AlbumViewTracklistWrap';
-import TracklistItem from '../Tracklist/TracklistItem';
 
 const AlbumViewTracklist = () => {
   return (
