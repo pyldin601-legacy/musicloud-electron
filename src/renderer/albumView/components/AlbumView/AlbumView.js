@@ -10,9 +10,7 @@ const AlbumView = () => {
   const [files, setFiles] = React.useState([]);
 
   React.useEffect(() => {
-    openAudioFiles().then(_files => {
-      setFiles(_files);
-    });
+    openAudioFiles().then(setFiles);
   }, []);
 
   console.log(files);
