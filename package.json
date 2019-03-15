@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "debug": "^4.1.1",
     "electron": "4.0.1",
     "ffmpeg-static": "^2.4.0",
     "ffprobe-static": "^3.0.0",

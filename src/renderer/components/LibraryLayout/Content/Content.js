@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 import ContentWrap from './ContentWrap';
-import AlbumView from '../../../../albumView/components/AlbumView/AlbumView';
+import AlbumView from '../../../albumView/components/AlbumView/AlbumView';
 
 const Content = () => {
   return (

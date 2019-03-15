@@ -1,5 +1,5 @@
 import React from 'react';
-import LibraryLayout from './libraryView/components/LibraryLayout/LibraryLayout';
+import LibraryLayout from './components/LibraryLayout/LibraryLayout';
 import './App.css';
 
 const App = () => {

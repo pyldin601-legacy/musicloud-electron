@@ -1,5 +1,5 @@
-import * as handleOpenAudioFiles from './handleOpenAudioFiles';
+import { createOpenAudioFilesEndpoint } from './openAudioFilesEndpoint';
 
-export default function registerIpcHandlers(ipcMain) {
-  handleOpenAudioFiles.register(ipcMain);
+export function createAPIEndpoints() {
+  createOpenAudioFilesEndpoint();
 }
