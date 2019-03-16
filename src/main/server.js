@@ -4,7 +4,8 @@ import { GET_WEB_PORT } from '../events';
 
 export function createWebServer() {
   const app = createApplication();
-  const listener = app.listen(0, () => {
+  const listener = app.listen(0, 'localhost', () => {
+    // eslint-disable-next-line no-console
     console.log(`Streaming server is listening on port ${listener.address().port}`);
   });
 

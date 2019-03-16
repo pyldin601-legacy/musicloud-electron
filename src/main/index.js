@@ -13,6 +13,8 @@ function createMainWindow() {
   const window = new BrowserWindow({
     webPreferences: { nodeIntegration: true },
     title: config.applicationName,
+    width: 1200,
+    height: 768,
   });
 
   if (isDevelopment) {
