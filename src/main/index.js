@@ -1,23 +1,19 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 import { format as formatUrl } from 'url';
-import { createAPIEndpoints } from './ipcHandlers';
+import { createWebServer } from './server';
 import config from '../config';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-// global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow;
+let webServerListener;
 
 function createMainWindow() {
   const window = new BrowserWindow({
     webPreferences: { nodeIntegration: true },
     title: config.applicationName,
   });
-
-  if (isDevelopment) {
-    window.webContents.openDevTools();
-  }
 
   if (isDevelopment) {
     window.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`);
@@ -35,13 +31,6 @@ function createMainWindow() {
     mainWindow = null;
   });
 
-  window.webContents.on('devtools-opened', () => {
-    window.focus();
-    setImmediate(() => {
-      window.focus();
-    });
-  });
-
   return window;
 }
 
@@ -50,6 +39,7 @@ app.on('window-all-closed', () => {
   // on macOS it is common for applications to stay open until the user explicitly quits
   if (process.platform !== 'darwin') {
     app.quit();
+    webServerListener.close();
   }
 });
 
@@ -62,6 +52,6 @@ app.on('activate', () => {
 
 // create main BrowserWindow when electron is ready
 app.on('ready', () => {
-  createAPIEndpoints();
+  webServerListener = createWebServer();
   mainWindow = createMainWindow();
 });
